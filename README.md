@@ -8,7 +8,7 @@ This Docker image has been tested with [Apple's `container`](https://github.com/
 
 	container system start
 	container build -c 1 -t anyconnect-proxy
-	container run anyconnect-proxy -C WEBVPN_COOKIE COOKIE_DOMAIN
+	container run --rm anyconnect-proxy -C WEBVPN_COOKIE COOKIE_DOMAIN
 
 `WEBVPN_COOKIE` can be obtained by opening the VPN domain in any browser, entering your credentials, and reading out the `webvpn` cookie that has been set in the process. The `COOKIE_DOMAIN` is the domain on which the cookie has been set (the domain that you are being forwarded to after opening the base domain in your browser).
 
